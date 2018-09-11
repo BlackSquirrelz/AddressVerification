@@ -1,0 +1,7 @@
+.idea/
+bin/
+config/
+include/
+lib/
+venv/config.env
+venv/pip-selfcheck.json

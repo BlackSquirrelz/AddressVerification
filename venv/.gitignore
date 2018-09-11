@@ -1,0 +1,6 @@
+Directory: bin/
+Directory: config/
+Directory: include/
+Directory: lib/
+File: venv/config.env
+File: venv/pip-selfcheck.json

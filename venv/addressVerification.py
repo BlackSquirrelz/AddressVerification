@@ -11,18 +11,19 @@ print "'Tis but a scratch!' -  The Black Knight (Monty Python FC)"
 
 # Default configuration of application, remains the same (more or less)
 config = ConfigParser.ConfigParser()
-config.read("/config.env")
+config.read("./config/config.ini")
+#print config
 
 USER = config.get('default', 'user') #['DEFAULT']['USER']
-PWD = config['DEFAULT']['PWD']
-CA_PATH = config['DEFAULT']['CA_PATH']
-URL = config['DEFAULT']['URL']
+PWD = config.get('default', 'pwd')
+CA_PATH = config.get('default', 'ca_path')
+URL = config.get('default', 'url')
 
 # configuration for the document
-PATH = config.get('DEFAULT', 'PATH')#config['DOCUMENT']['PATH']
-SEARCH_LANG = config['DOCUMENT']['SEARCH_LANG']
-MAX_ROWS = config['DOCUMENT']['MAX_ROWS']
-SEARCH_TYPE = config['DOCUMENT']['SEARCH_TYPE']
+PATH = config.get('document', 'path')#config['DOCUMENT']['PATH']
+SEARCH_LANG = config.get('document', 'search_lang')
+MAX_ROWS = config.get('document', 'max_rows')
+SEARCH_TYPE = config.get('document', 'search_type')
 
 addresses = []
 
